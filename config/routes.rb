@@ -1,7 +1,7 @@
 ProjectMiracle::Application.routes.draw do
-  get "pages/home"
-
-  get "pages/about"
+  match '/about', :to => 'pages#about'
+  root :to => 'pages#home'
+end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -59,4 +59,3 @@ ProjectMiracle::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-end
