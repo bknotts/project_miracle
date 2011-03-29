@@ -3,6 +3,7 @@ ProjectMiracle::Application.routes.draw do
 
   match '/about', :to => 'pages#about'
   root :to => 'pages#home'
+  match '/signup', :to => 'users#new'
 end
 
   # The priority is based upon order of creation:
