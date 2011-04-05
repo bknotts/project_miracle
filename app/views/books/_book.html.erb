@@ -6,4 +6,12 @@
 	  Posted <%= time_ago_in_words(book.created_at) %> ago.
 	</span>
   </td>
+  <% if current_user?(book.user) %>
+  <td>
+    <%= link_to "delete", book, :method => :delete,
+								:confirm => "You sure?",
+								:title => ("book.title" + " " + "book.author") %>
+  </td>
+  <% end %>
+</tr>
 </tr>
