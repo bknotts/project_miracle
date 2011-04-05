@@ -2,10 +2,18 @@
   <tr>
 	<td class="main">
 	  <h1><%= @user.name %></h1>
+	  <% unless @user.books.empty? %>
+	  	<table class="books" summary="User books">
+		  <%= render @books %>
+	  	</table>
+	    <%= will_paginate @books %>
+	  <% end %>
 	</td>
 	<td class="sidebar round">
 		<strong>Name</strong> <%= @user.name %><br />
-		<strong>URL</strong> <%= link_to "My Profile Link", @user %>
+		<strong>URL</strong> <%= link_to "My Profile Link", @user %><br />
+		<strong>Books</strong> <%= @user.books.count %><br />
+		<strong>Notes</strong> <%= "Need to Code" %>
 	</td>
   </tr>
 </table>

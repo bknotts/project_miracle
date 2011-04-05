@@ -104,6 +104,40 @@ td.sidebar {
   background: #ffc;
 }
 
+h1.book {
+  margin-bottom: 0.3em;
+}
+
+table.books {
+  margin-top: 1em;
+}
+
+table.books tr {
+  height: 70px;
+}
+
+table.books tr td.book {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  /*width: 50px;*/
+}
+
+table.books tr td.book span.title {
+  font-weight: bold;
+}
+
+table.books tr td.book span.author {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+
+table.books tr td.book span.timestamp {
+  display: block;
+  font-size: 75%;
+  color: #666;
+}
+
 /* All users page */
 
 ul.users {

@@ -3,6 +3,7 @@ ProjectMiracle::Application.routes.draw do
 
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :books, :only => [:create, :destroy]
 
   match '/about', :to => 'pages#about'
   root :to => 'pages#home'

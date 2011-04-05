@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110404180311) do
+ActiveRecord::Schema.define(:version => 20110404193009) do
+
+  create_table "books", :force => true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "books", ["user_id"], :name => "index_books_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
